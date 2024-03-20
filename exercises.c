@@ -49,7 +49,7 @@ List* crea_lista()
 
   for (int i = 1 ; i <= 10 ; i++)
     {
-       numeros[i] = i; 
+       numeros = i; 
     }
 
   for (int i = 0 ; i < 10 ; i++)
