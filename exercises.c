@@ -66,7 +66,7 @@ int sumaLista(List *L)
   int arr[5] = {21,9,10,3,4};
   for (int i = 0 ; i < 5 ; i++)
     {
-      pushFront(L,&arr);
+      pushFront(L,arr);
     }
   
   return 0;
