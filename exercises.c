@@ -53,8 +53,7 @@ List* crea_lista()
        pushBack(L,numeros);
        i++;
      }
-  free(numeros);
-   return L;
+  return L;
 }
 
 /*
