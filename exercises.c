@@ -43,12 +43,12 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() 
 {
-   List* L = create_list();
-  int *numeros = malloc(sizeof(int));
-  if (numeros == NULL) return NULL;
+  List* L = create_list();
   int i = 1;
    while (i <= 10)
      {
+       int *numeros = malloc(sizeof(int));
+       if (numeros == NULL) return NULL;
        *numeros = i;
        pushBack(L,numeros);
        i++;
