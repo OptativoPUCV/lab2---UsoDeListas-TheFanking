@@ -4,3 +4,17 @@ Wed 20 Mar 2024 09:46:08 PM UTC:
  tests:  0|5
 total_score: 0/70
 c36c39a
+Wed 20 Mar 2024 09:48:52 PM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:28: error: expected ‘;’ before ‘}’ token
+   50 |        pushFront(L,numeros)
+      |                            ^
+      |                            ;
+......
+   53 |      }
+      |      ~                      
+Compilation failed
+c860e82
