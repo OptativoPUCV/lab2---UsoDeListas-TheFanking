@@ -281,3 +281,13 @@ Wed 20 Mar 2024 11:14:56 PM UTC:
  tests:  1|4
 total_score: 10/70
 d40c387
+Wed 20 Mar 2024 11:37:34 PM UTC: 
+ exercises.c | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:93:10: error: expected expression before ‘)’ token
+   93 |   while ()
+      |          ^
+Compilation failed
+bbe3c9c

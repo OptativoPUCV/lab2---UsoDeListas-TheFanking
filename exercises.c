@@ -63,13 +63,19 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) 
 {
+  int suma = 0;
   int arr[5] = {21,9,10,3,4};
   for (int i = 0 ; i < 5 ; i++)
     {
       pushFront(L,arr);
+      
+    }
+  while (L != NULL)
+    {
+       suma++; 
     }
   
-  return 0;
+  return suma;
 }
 
 /*
@@ -81,8 +87,10 @@ Asume que popCurrent luego de eliminar un elemento se
 posiciona en el elemento anterior.
 */
 
-void eliminaElementos(List*L, int elem){
-
+void eliminaElementos(List*L, int elem)
+{
+  
+  while ()
 }
 
 /*
