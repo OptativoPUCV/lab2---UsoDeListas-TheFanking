@@ -51,8 +51,8 @@ List* crea_lista()
        if (numeros == NULL) return NULL;
        *numeros = i;
        pushBack(L,&numeros);
-       free(numeros);
        i++;
+       free(numeros);
      }
   return L;
 }
