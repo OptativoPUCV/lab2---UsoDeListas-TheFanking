@@ -50,7 +50,6 @@ List* crea_lista()
        int *numeros = malloc(sizeof(int));
        if (numeros == NULL) return NULL;
        *numeros = i;
-       free(numeros);
        pushBack(L,numeros);
        i++;
      }
