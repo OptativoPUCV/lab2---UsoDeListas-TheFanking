@@ -50,8 +50,8 @@ List* crea_lista()
        int *numeros = malloc(sizeof(int));
        if (numeros == NULL) return NULL;
        *numeros = i;
-       pushBack(L,numeros);
        free(numeros);
+       pushBack(L,numeros);
        i++;
      }
   return L;
