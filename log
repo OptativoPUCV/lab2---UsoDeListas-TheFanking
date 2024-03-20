@@ -112,3 +112,9 @@ exercises.c:53:8: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 2c31dc2
+Wed 20 Mar 2024 10:24:08 PM UTC: 
+ exercises.c | 7 -------
+ 1 file changed, 7 deletions(-)
+ tests:  1|4
+total_score: 10/70
+0f10bd1
