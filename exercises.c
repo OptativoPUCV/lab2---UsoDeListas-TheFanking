@@ -51,7 +51,7 @@ List* crea_lista()
        if (numeros == NULL) return NULL;
        *numeros = i;
        i++;
-       pushFront(L,numeros);
+       pushBack(L,numeros);
      }
   
     
