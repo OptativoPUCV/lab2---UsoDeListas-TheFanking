@@ -98,3 +98,17 @@ Wed 20 Mar 2024 10:19:19 PM UTC:
  1 file changed, 1 insertion(+)
  tests:  0|0
 a39d785
+Wed 20 Mar 2024 10:19:40 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:58:3: error: ‘free’ called on unallocated object ‘numero’ [-Werror=free-nonheap-object]
+   58 |   free(numero);
+      |   ^~~~~~~~~~~~
+exercises.c:53:8: note: declared here
+   53 |    int numero[10] = {1,2,3,4,5,6,7,8,9,10};
+      |        ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2c31dc2
