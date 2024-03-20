@@ -47,7 +47,7 @@ List* crea_lista() {
    for (int i = 0 ; i < 10 ; i++)
      {
        L = realloc(L,sizeof(10));
-       pushFront(L,numeros)
+       pushFront(L,numeros);
          
        
      }
