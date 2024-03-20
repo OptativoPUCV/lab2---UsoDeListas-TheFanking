@@ -53,7 +53,6 @@ List* crea_lista() {
      {
        pushFront(L,&numero[i]);
      }
-  free(L);
    return L;
 }
 
