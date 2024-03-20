@@ -44,11 +44,20 @@ Al finalizar retorna la lista creada.
 List* crea_lista() 
 {
    List* L = create_list();
-   int numero[10] = {1,2,3,4,5,6,7,8,9,10};
-   for (int i = 0 ; i < 10  ; i++)
-     {
-       pushFront(L,&numero[i]);
-     }
+   int *numeros;
+    numeros = malloc(sizeof(int));
+
+  for (int i = 1 ; i <= 10 ; i++)
+    {
+       numeros[i] = i; 
+    }
+
+  for (int i = 0 ; i < 10 ; i++)
+    {
+      pushFront(L,&numeros[i]);
+    }
+
+  
    return L;
 }
 

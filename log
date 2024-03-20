@@ -118,3 +118,17 @@ Wed 20 Mar 2024 10:24:08 PM UTC:
  tests:  1|4
 total_score: 10/70
 0f10bd1
+Wed 20 Mar 2024 10:29:09 PM UTC: 
+ exercises.c | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:52:15: error: array subscript [1, 10] is outside array bounds of ‘int[1]’ [-Werror=array-bounds]
+   52 |        numeros[i] = i;
+      |        ~~~~~~~^~~
+exercises.c:48:15: note: referencing an object of size 4 allocated by ‘malloc’
+   48 |     numeros = malloc(sizeof(int));
+      |               ^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f3e2735
