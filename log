@@ -55,3 +55,14 @@ Wed 20 Mar 2024 10:00:15 PM UTC:
  tests:  1|4
 total_score: 10/70
 cf924c7
+Wed 20 Mar 2024 10:13:23 PM UTC: 
+ exercises.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:64:7: error: unused variable ‘suma’ [-Werror=unused-variable]
+   64 |   int suma = 0;
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4c9a68b
