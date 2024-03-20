@@ -61,21 +61,7 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) 
 {
-  int suma = 0;
-  List* valor = create_list();
-  int valores[5] = {1,14,6,7,8};
-  for (int i = 0 ;  i < 10 ; i++)
-    {
-      
-      pushFront(valor,&valores[i]);
-    }
-  
-  while (valor != NULL)
-    {
-      
-    }
-    
-   return 0;
+  return 0;
 }
 
 /*
