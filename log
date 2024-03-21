@@ -291,3 +291,9 @@ exercises.c:93:10: error: expected expression before ‘)’ token
       |          ^
 Compilation failed
 bbe3c9c
+Thu 21 Mar 2024 06:28:31 PM UTC: 
+ exercises.c | 14 +++++---------
+ 1 file changed, 5 insertions(+), 9 deletions(-)
+ tests:  2|3
+total_score: 20/70
+0983118
