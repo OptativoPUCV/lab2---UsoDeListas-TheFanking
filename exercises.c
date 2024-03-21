@@ -86,14 +86,14 @@ posiciona en el elemento anterior.
 
 void eliminaElementos(List*L, int elem)
 {
-  int *backan = (int *) first(L);
-  while (backan != NULL)
+  int *numeros = (int *) first(L);
+  while (numeros != NULL)
     {
-      if (*backan == elem)
+      if (*numeros == elem)
       {
         popCurrent(L);
       }
-      backan = (int *) next(L);
+      numeros = (int *) next(L);
     }
   
 }
@@ -105,7 +105,8 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-void copia_pila(Stack* P1, Stack* P2) {
+void copia_pila(Stack* P1, Stack* P2) 
+{
 }
 
 /*
