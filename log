@@ -485,3 +485,17 @@ exercises.c:165:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 a8bcda1
+Sat 23 Mar 2024 07:47:03 PM UTC: 
+ exercises.c | 33 ++++++++++++---------------------
+ 1 file changed, 12 insertions(+), 21 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:145:28: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  145 |       if (cadena[i] == '(' && *(char*)top(pila) ||
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+exercises.c:147:28: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  147 |           cadena[i] == '[' && *(char*)top(pila))
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9ffe823
