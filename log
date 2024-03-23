@@ -468,3 +468,20 @@ Sat 23 Mar 2024 06:50:58 PM UTC:
  tests:  4|1
 total_score: 50/70
 92a8506
+Sat 23 Mar 2024 07:12:04 PM UTC: 
+ exercises.c | 17 +++++++----------
+ 1 file changed, 7 insertions(+), 10 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:157:20: error: invalid use of undefined type ‘struct List’
+  157 |         if (pilaAux[i] == NULL)
+      |                    ^
+exercises.c:157:13: error: invalid use of incomplete typedef ‘Stack’ {aka ‘List’}
+  157 |         if (pilaAux[i] == NULL)
+      |             ^~~~~~~
+exercises.c:165:1: error: control reaches end of non-void function [-Werror=return-type]
+  165 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+a8bcda1
