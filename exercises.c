@@ -161,7 +161,7 @@ int parentesisBalanceados(char *cadena)
             else if (cadena[i] == '{' && *(char*)top(pila) != '{')
             {
               return 0;
-              top(pila)
+              top(pila);
             }
           }
         }
