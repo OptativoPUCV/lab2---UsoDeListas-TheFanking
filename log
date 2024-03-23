@@ -739,3 +739,16 @@ exercises.c:148:33: error: suggest parentheses around ‘&&’ within ‘||’ [
 cc1: all warnings being treated as errors
 Compilation failed
 8c688fe
+Sat 23 Mar 2024 08:34:10 PM UTC: 
+ exercises.c | 29 +++++++++++++----------------
+ 1 file changed, 13 insertions(+), 16 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:149:26: error: called object ‘top’ is not a function or function pointer
+  149 |       char *top = (char*)top(pila);
+      |                          ^~~
+exercises.c:149:13: note: declared here
+  149 |       char *top = (char*)top(pila);
+      |             ^~~
+Compilation failed
+848402f
