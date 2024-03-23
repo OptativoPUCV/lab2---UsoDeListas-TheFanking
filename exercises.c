@@ -148,6 +148,10 @@ int parentesisBalanceados(char *cadena)
       else
       {
         if (top(pila) == NULL) return 0;
+        else
+        {
+          return 1;  
+        }
       }
       pop(pila);
     }
