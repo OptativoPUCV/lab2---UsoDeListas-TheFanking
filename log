@@ -1553,3 +1553,13 @@ Sat 23 Mar 2024 10:13:16 PM UTC:
  tests:  5|1
 total_score: 50/70
 017272a
+Sat 23 Mar 2024 10:14:13 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:148:60: error: expected statement before ‘)’ token
+  148 |         if (cadena[i] == ')' && *(char *) top(pila) == '('))
+      |                                                            ^
+Compilation failed
+634c86a
