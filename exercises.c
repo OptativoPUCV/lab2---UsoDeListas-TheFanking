@@ -130,62 +130,36 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) 
 {
-  Stack* pila = createStack();
-  int talla = 0;
-  for(int i = 0; cadena[i]!= '\0' ; i++)
-  {
-    talla++;
-  }
-  for(int i = 1; i < talla - 1; i++)
-  {
-    switch(cadena[i])
+  Stack *pilaAux = create_stack();
+  for (int i = 1 ; i < strlen(cadena) ; i++)
+    {
+       if ('(' & '{' & '[')
+       {
+         push(pilaAux,&cadena[i]);
+       }
+      if (cadena[i] == ')' && *(char*)top(pilaAux) != '(')
       {
-        case '(': push(pila, cadena[i]);
-                  break;
-        case '[': push(pila, cadena[i]);
-                  break;
-        case '{': push(pila, cadena[i]);
-                  break;
-        case ')': if (top(pila) != NULL)
-                  {
-                    if(top(pila) == '(')
-                    {
-                      pop(pila);
-                    }
-                  }
-                  else
-                  {
-                    return 0;
-                  }
-        case ']': if (top(pila) != NULL)
-                  {
-                    if(top(pila) == '[')
-                    {
-                      pop(pila);
-                    }
-                  }
-                  else{
-                    return 0;
-                  }
-        case '}': if (top(pila) != NULL)
-                  {
-                    if(top(pila) == '{')
-                    {
-                      pop(pila);
-                    }
-                  }
-                  else{
-                    return 0;
-                  }
+        return 0;
       }
-
-  }
-  if(top(pila) != NULL)
-  {
-    return 0;
-  }
-  return 1;
+      else if(cadena[i] == '}' && *(char*)top(pilaAux) != '{')
+      {
+        return 0;
+      }
+      else if (cadena[i] == ']' && *(char*)top(pilaAux) != '[')
+      {
+        return 0;
+      }
+      else
+      {
+        if (top(pilaAux) == NULL) return 0;
+        pop(pilaAux);
+      }
+    }
+    if (top(pilaAux) != NULL)
+    {
+       return 0; 
+    }
   
-   return 0;
+   return 1;
 }
 
