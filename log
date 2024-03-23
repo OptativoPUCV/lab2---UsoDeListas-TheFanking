@@ -354,3 +354,58 @@ Fri 22 Mar 2024 06:10:20 PM UTC:
  tests:  4|1
 total_score: 50/70
 c033283
+Sat 23 Mar 2024 06:14:11 PM UTC: 
+ exercises.c | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 55 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:17: error: implicit declaration of function ‘createStack’; did you mean ‘create_stack’? [-Werror=implicit-function-declaration]
+  133 |   Stack* pila = createStack();
+      |                 ^~~~~~~~~~~
+      |                 create_stack
+exercises.c:133:17: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:143:36: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  143 |         case '(': push(pila, cadena[i]);
+      |                              ~~~~~~^~~
+      |                                    |
+      |                                    char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:145:36: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  145 |         case '[': push(pila, cadena[i]);
+      |                              ~~~~~~^~~
+      |                                    |
+      |                                    char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:147:36: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  147 |         case '{': push(pila, cadena[i]);
+      |                              ~~~~~~^~~
+      |                                    |
+      |                                    char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:151:34: error: comparison between pointer and integer [-Werror]
+  151 |                     if(top(pila) == '(')
+      |                                  ^~
+exercises.c:162:34: error: comparison between pointer and integer [-Werror]
+  162 |                     if(top(pila) == '[')
+      |                                  ^~
+exercises.c:172:34: error: comparison between pointer and integer [-Werror]
+  172 |                     if(top(pila) == '{')
+      |                                  ^~
+cc1: all warnings being treated as errors
+Compilation failed
+8114843
