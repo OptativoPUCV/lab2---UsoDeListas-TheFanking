@@ -133,46 +133,42 @@ int parentesisBalanceados(char *cadena)
   Stack *pila = crea_lista();
 
   for (int i = 0 ; i < strlen(cadena) ; i++)
+  {
+    if (cadena[i] == '(' || cadena[i] == '{' || cadena[i] == '[')
     {
-      if (cadena[i] == '(' || cadena[i] == '{' || cadena[i] == '[')
-      {
-        push(pila,&cadena[i]);
-        break;
-      }
+      push(pila,&cadena[i]);
+      break;
+    }
+    
+    if (*(char *)top(pila) == ')')
+    {
       if (top(pila) == NULL)
       {
         return 0;
       }
       else
       {
-        if (*(char*)top(pila) == ')')
+        if (cadena[i] == ')' && *(char *)top(pila) == '(')
         {
-          if (top(pila) == NULL)
-          {
-            return 0;
-          }
-          else
-          {
-            if (cadena[i] == ')' && *(char*)top(pila) == '(')
-            {
-              pop(pila);
-              return 0;
-            }
-            if (cadena[i] == ']' && *(char*)top(pila) != '[')
-            {
-              pop(pila);
-              return 0;
-            }
-            else if (cadena[i] == '{' && *(char*)top(pila) != '{')
-            {
-              pop(pila);
-              return 0;
-            }
-          }
+          pop(pila);
+          return 0;
         }
-      }  
+        else if (cadena[i] == '}' && *(char *)top(pila) == '{')
+        {
+          pop(pila);
+          return 0;
+        }
+        else if (cadena[i] == ']' && *(char *)top(pila) == '[')
+        {
+          pop(pila);
+          return 0;
+        }
+      }
     }
-
-  if (top(pila) == NULL) return 0;
+  }
+  if (top(pila) == NULL)
+  {
+    return 0;
+  }
   return 1;
 }
