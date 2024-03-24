@@ -149,11 +149,11 @@ int parentesisBalanceados(char *cadena)
       {
         return 0;
       }
-      if (cadena[i] == '}' && *(char *)top(pila) != '{')
+      else if (cadena[i] == '}' && *(char *)top(pila) != '{')
       {
         return 0;
       }
-      if (cadena[i] == ']' && *(char *)top(pila) != '[')
+      else if (cadena[i] == ']' && *(char *)top(pila) != '[')
       {
         return 0;
       }
