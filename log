@@ -1894,3 +1894,16 @@ Sun 24 Mar 2024 12:13:00 AM UTC:
  tests:  5|1
 total_score: 50/70
 fc83f10
+Sun 24 Mar 2024 12:15:15 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:17: error: implicit declaration of function ‘createStack’; did you mean ‘create_stack’? [-Werror=implicit-function-declaration]
+  133 |   Stack *pila = createStack();
+      |                 ^~~~~~~~~~~
+      |                 create_stack
+exercises.c:133:17: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+cc1: all warnings being treated as errors
+Compilation failed
+6de0609
